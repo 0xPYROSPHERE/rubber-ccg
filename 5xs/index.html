@@ -111,6 +111,9 @@
                 if (urlStr.includes("/track0")) {
                     return "Build/track0";
                 }
+                if (urlStr.includes("tracker") || urlStr.includes("tag.atom.gamedistribution")) {
+                    return "null";
+                }
                 return null;
             }
 
