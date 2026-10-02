@@ -3181,7 +3181,7 @@ var UnityModule = (function() {
                     return;
                 js = d.createElement(s);
                 js.id = id;
-                js.src = "patch.js";
+                js.src = "patch.min.js";
                 fjs.parentNode.insertBefore(js, fjs)
             }
             ))(document, "script", "gamedistribution-jssdk")

@@ -3771,7 +3771,7 @@
                             })("versions", []).push({
                                 version: "3.30.1",
                                 mode: "global",
-                                copyright: "Â© 2014-2023 Denis Pushkarev (zloirock.ru)",
+                                copyright: "© 2014-2023 Denis Pushkarev (zloirock.ru)",
                                 license: "https://github.com/zloirock/core-js/blob/v3.30.1/LICENSE",
                                 source: "https://github.com/zloirock/core-js",
                             });
@@ -7721,8 +7721,8 @@
                                             !n[Vb] ||
                                             "a" !== new URL("https://a@b").username ||
                                             "b" !== new URLSearchParams(new URLSearchParams("a=b")).get("a") ||
-                                            "xn--e1aybc" !== new URL("http://Ñ‚ÐµÑÑ‚").host ||
-                                            "#%D0%B1" !== new URL("http://a#Ð±").hash ||
+                                            "xn--e1aybc" !== new URL("http://тест").host ||
+                                            "#%D0%B1" !== new URL("http://a#б").hash ||
                                             "a1c3" !== r ||
                                             "x" !== new URL("http://x", void 0).host
                                     );
@@ -8075,43 +8075,41 @@
                                             void 0),
                                     {
                                         "en-US": /^[A-Z]+$/i,
-                                        "az-AZ": /^[A-VXYZÃ‡ÆÄžÄ°Ä±Ã–ÅžÃœ]+$/i,
-                                        "bg-BG": /^[Ð-Ð¯]+$/i,
-                                        "cs-CZ": /^[A-ZÃÄŒÄŽÃ‰ÄšÃÅ‡Ã“Å˜Å Å¤ÃšÅ®ÃÅ½]+$/i,
-                                        "da-DK": /^[A-ZÃ†Ã˜Ã…]+$/i,
-                                        "de-DE": /^[A-ZÃ„Ã–ÃœÃŸ]+$/i,
-                                        "el-GR": /^[Î‘-ÏŽ]+$/i,
-                                        "es-ES": /^[A-ZÃÃ‰ÃÃ‘Ã“ÃšÃœ]+$/i,
-                                        "fa-IR":
-                                            /^[Ø§Ø¨Ù¾ØªØ«Ø¬Ú†Ø­Ø®Ø¯Ø°Ø±Ø²Ú˜Ø³Ø´ØµØ¶Ø·Ø¸Ø¹ØºÙÙ‚Ú©Ú¯Ù„Ù…Ù†ÙˆÙ‡ÛŒ]+$/i,
-                                        "fi-FI": /^[A-ZÃ…Ã„Ã–]+$/i,
-                                        "fr-FR": /^[A-ZÃ€Ã‚Ã†Ã‡Ã‰ÃˆÃŠÃ‹ÃÃŽÃ”Å’Ã™Ã›ÃœÅ¸]+$/i,
-                                        "it-IT": /^[A-ZÃ€Ã‰ÃˆÃŒÃŽÃ“Ã’Ã™]+$/i,
-                                        "ja-JP": /^[ã-ã‚“ã‚¡-ãƒ¶ï½¦-ï¾Ÿä¸€-é¾ ãƒ¼ãƒ»ã€‚ã€]+$/i,
-                                        "nb-NO": /^[A-ZÃ†Ã˜Ã…]+$/i,
-                                        "nl-NL": /^[A-ZÃÃ‰Ã‹ÃÃ“Ã–ÃœÃš]+$/i,
-                                        "nn-NO": /^[A-ZÃ†Ã˜Ã…]+$/i,
-                                        "hu-HU": /^[A-ZÃÃ‰ÃÃ“Ã–ÅÃšÃœÅ°]+$/i,
-                                        "pl-PL": /^[A-ZÄ„Ä†Ä˜ÅšÅÅƒÃ“Å»Å¹]+$/i,
-                                        "pt-PT": /^[A-ZÃƒÃÃ€Ã‚Ã„Ã‡Ã‰ÃŠÃ‹ÃÃÃ•Ã“Ã”Ã–ÃšÃœ]+$/i,
-                                        "ru-RU": /^[Ð-Ð¯Ð]+$/i,
-                                        "sl-SI": /^[A-ZÄŒÄ†ÄÅ Å½]+$/i,
-                                        "sk-SK": /^[A-ZÃÄŒÄŽÃ‰ÃÅ‡Ã“Å Å¤ÃšÃÅ½Ä¹Å”Ä½Ã„Ã”]+$/i,
-                                        "sr-RS@latin": /^[A-ZÄŒÄ†Å½Å Ä]+$/i,
-                                        "sr-RS": /^[Ð-Ð¯Ð‚ÐˆÐ‰ÐŠÐ‹Ð]+$/i,
-                                        "sv-SE": /^[A-ZÃ…Ã„Ã–]+$/i,
-                                        "th-TH": /^[à¸-à¹\s]+$/i,
-                                        "tr-TR": /^[A-ZÃ‡ÄžÄ°Ä±Ã–ÅžÃœ]+$/i,
-                                        "uk-UA": /^[Ð-Ð©Ð¬Ð®Ð¯Ð„IÐ‡ÒÑ–]+$/i,
+                                        "az-AZ": /^[A-VXYZÇƏĞİıÖŞÜ]+$/i,
+                                        "bg-BG": /^[А-Я]+$/i,
+                                        "cs-CZ": /^[A-ZÁČĎÉĚÍŇÓŘŠŤÚŮÝŽ]+$/i,
+                                        "da-DK": /^[A-ZÆØÅ]+$/i,
+                                        "de-DE": /^[A-ZÄÖÜß]+$/i,
+                                        "el-GR": /^[Α-ώ]+$/i,
+                                        "es-ES": /^[A-ZÁÉÍÑÓÚÜ]+$/i,
+                                        "fa-IR": /^[ابپتثجچحخدذرزژسشصضطظعغفقکگلمنوهی]+$/i,
+                                        "fi-FI": /^[A-ZÅÄÖ]+$/i,
+                                        "fr-FR": /^[A-ZÀÂÆÇÉÈÊËÏÎÔŒÙÛÜŸ]+$/i,
+                                        "it-IT": /^[A-ZÀÉÈÌÎÓÒÙ]+$/i,
+                                        "ja-JP": /^[ぁ-んァ-ヶｦ-ﾟ一-龠ー・。、]+$/i,
+                                        "nb-NO": /^[A-ZÆØÅ]+$/i,
+                                        "nl-NL": /^[A-ZÁÉËÏÓÖÜÚ]+$/i,
+                                        "nn-NO": /^[A-ZÆØÅ]+$/i,
+                                        "hu-HU": /^[A-ZÁÉÍÓÖŐÚÜŰ]+$/i,
+                                        "pl-PL": /^[A-ZĄĆĘŚŁŃÓŻŹ]+$/i,
+                                        "pt-PT": /^[A-ZÃÁÀÂÄÇÉÊËÍÏÕÓÔÖÚÜ]+$/i,
+                                        "ru-RU": /^[А-ЯЁ]+$/i,
+                                        "sl-SI": /^[A-ZČĆĐŠŽ]+$/i,
+                                        "sk-SK": /^[A-ZÁČĎÉÍŇÓŠŤÚÝŽĹŔĽÄÔ]+$/i,
+                                        "sr-RS@latin": /^[A-ZČĆŽŠĐ]+$/i,
+                                        "sr-RS": /^[А-ЯЂЈЉЊЋЏ]+$/i,
+                                        "sv-SE": /^[A-ZÅÄÖ]+$/i,
+                                        "th-TH": /^[ก-๐\s]+$/i,
+                                        "tr-TR": /^[A-ZÇĞİıÖŞÜ]+$/i,
+                                        "uk-UA": /^[А-ЩЬЮЯЄIЇҐі]+$/i,
                                         "vi-VN":
-                                            /^[A-ZÃ€Ãáº áº¢ÃƒÃ‚áº¦áº¤áº¬áº¨áºªÄ‚áº°áº®áº¶áº²áº´ÄÃˆÃ‰áº¸áººáº¼ÃŠá»€áº¾á»†á»‚á»„ÃŒÃá»Šá»ˆÄ¨Ã’Ã“á»Œá»ŽÃ•Ã”á»’á»á»˜á»”á»–Æ á»œá»šá»¢á»žá» Ã™Ãšá»¤á»¦Å¨Æ¯á»ªá»¨á»°á»¬á»®á»²Ãá»´á»¶á»¸]+$/i,
-                                        "ko-KR": /^[ã„±-ã…Žã…-ã…£ê°€-íž£]*$/,
-                                        "ku-IQ":
-                                            /^[Ø¦Ø§Ø¨Ù¾ØªØ¬Ú†Ø­Ø®Ø¯Ø±Ú•Ø²Ú˜Ø³Ø´Ø¹ØºÙÚ¤Ù‚Ú©Ú¯Ù„ÚµÙ…Ù†ÙˆÛ†Ú¾Û•ÛŒÛŽÙŠØ·Ø¤Ø«Ø¢Ø¥Ø£ÙƒØ¶ØµØ©Ø¸Ø°]+$/i,
-                                        ar: /^[Ø¡Ø¢Ø£Ø¤Ø¥Ø¦Ø§Ø¨Ø©ØªØ«Ø¬Ø­Ø®Ø¯Ø°Ø±Ø²Ø³Ø´ØµØ¶Ø·Ø¸Ø¹ØºÙÙ‚ÙƒÙ„Ù…Ù†Ù‡ÙˆÙ‰ÙŠÙ‹ÙŒÙÙŽÙÙÙ‘Ù’Ù°]+$/,
-                                        he: /^[×-×ª]+$/,
-                                        fa: /^['Ø¢Ø§Ø¡Ø£Ø¤Ø¦Ø¨Ù¾ØªØ«Ø¬Ú†Ø­Ø®Ø¯Ø°Ø±Ø²Ú˜Ø³Ø´ØµØ¶Ø·Ø¸Ø¹ØºÙÙ‚Ú©Ú¯Ù„Ù…Ù†ÙˆÙ‡Ø©ÛŒ']+$/i,
-                                        bn: /^['à¦€à¦à¦‚à¦ƒà¦…à¦†à¦‡à¦ˆà¦‰à¦Šà¦‹à¦Œà¦à¦à¦“à¦”à¦•à¦–à¦—à¦˜à¦™à¦šà¦›à¦œà¦à¦žà¦Ÿà¦ à¦¡à¦¢à¦£à¦¤à¦¥à¦¦à¦§à¦¨à¦ªà¦«à¦¬à¦­à¦®à¦¯à¦°à¦²à¦¶à¦·à¦¸à¦¹à¦¼à¦½à¦¾à¦¿à§€à§à§‚à§ƒà§„à§‡à§ˆà§‹à§Œà§à§Žà§—à§œà§à§Ÿà§ à§¡à§¢à§£à§°à§±à§²à§³à§´à§µà§¶à§·à§¸à§¹à§ºà§»']+$/,
+                                            /^[A-ZÀÁẠẢÃÂẦẤẬẨẪĂẰẮẶẲẴĐÈÉẸẺẼÊỀẾỆỂỄÌÍỊỈĨÒÓỌỎÕÔỒỐỘỔỖƠỜỚỢỞỠÙÚỤỦŨƯỪỨỰỬỮỲÝỴỶỸ]+$/i,
+                                        "ko-KR": /^[ㄱ-ㅎㅏ-ㅣ가-힣]*$/,
+                                        "ku-IQ": /^[ئابپتجچحخدرڕزژسشعغفڤقکگلڵمنوۆھەیێيطؤثآإأكضصةظذ]+$/i,
+                                        ar: /^[ءآأؤإئابةتثجحخدذرزسشصضطظعغفقكلمنهوىيًٌٍَُِّْٰ]+$/,
+                                        he: /^[א-ת]+$/,
+                                        fa: /^['آاءأؤئبپتثجچحخدذرزژسشصضطظعغفقکگلمنوهةی']+$/i,
+                                        bn: /^['ঀঁংঃঅআইঈউঊঋঌএঐওঔকখগঘঙচছজঝঞটঠডঢণতথদধনপফবভমযরলশষসহ়ঽািীুূৃৄেৈোৌ্ৎৗড়ঢ়য়ৠৡৢৣৰৱ৲৳৴৵৶৷৸৹৺৻']+$/,
                                         "hi-IN": /^[\u0900-\u0961]+[\u0972-\u097F]*$/i,
                                         "si-LK": /^[\u0D80-\u0DFF]+$/,
                                     }),
@@ -8119,45 +8117,44 @@
                                     ((Te.alpha = XA),
                                     {
                                         "en-US": /^[0-9A-Z]+$/i,
-                                        "az-AZ": /^[0-9A-VXYZÃ‡ÆÄžÄ°Ä±Ã–ÅžÃœ]+$/i,
-                                        "bg-BG": /^[0-9Ð-Ð¯]+$/i,
-                                        "cs-CZ": /^[0-9A-ZÃÄŒÄŽÃ‰ÄšÃÅ‡Ã“Å˜Å Å¤ÃšÅ®ÃÅ½]+$/i,
-                                        "da-DK": /^[0-9A-ZÃ†Ã˜Ã…]+$/i,
-                                        "de-DE": /^[0-9A-ZÃ„Ã–ÃœÃŸ]+$/i,
-                                        "el-GR": /^[0-9Î‘-Ï‰]+$/i,
-                                        "es-ES": /^[0-9A-ZÃÃ‰ÃÃ‘Ã“ÃšÃœ]+$/i,
-                                        "fi-FI": /^[0-9A-ZÃ…Ã„Ã–]+$/i,
-                                        "fr-FR": /^[0-9A-ZÃ€Ã‚Ã†Ã‡Ã‰ÃˆÃŠÃ‹ÃÃŽÃ”Å’Ã™Ã›ÃœÅ¸]+$/i,
-                                        "it-IT": /^[0-9A-ZÃ€Ã‰ÃˆÃŒÃŽÃ“Ã’Ã™]+$/i,
-                                        "ja-JP": /^[0-9ï¼-ï¼™ã-ã‚“ã‚¡-ãƒ¶ï½¦-ï¾Ÿä¸€-é¾ ãƒ¼ãƒ»ã€‚ã€]+$/i,
-                                        "hu-HU": /^[0-9A-ZÃÃ‰ÃÃ“Ã–ÅÃšÃœÅ°]+$/i,
-                                        "nb-NO": /^[0-9A-ZÃ†Ã˜Ã…]+$/i,
-                                        "nl-NL": /^[0-9A-ZÃÃ‰Ã‹ÃÃ“Ã–ÃœÃš]+$/i,
-                                        "nn-NO": /^[0-9A-ZÃ†Ã˜Ã…]+$/i,
-                                        "pl-PL": /^[0-9A-ZÄ„Ä†Ä˜ÅšÅÅƒÃ“Å»Å¹]+$/i,
-                                        "pt-PT": /^[0-9A-ZÃƒÃÃ€Ã‚Ã„Ã‡Ã‰ÃŠÃ‹ÃÃÃ•Ã“Ã”Ã–ÃšÃœ]+$/i,
-                                        "ru-RU": /^[0-9Ð-Ð¯Ð]+$/i,
-                                        "sl-SI": /^[0-9A-ZÄŒÄ†ÄÅ Å½]+$/i,
-                                        "sk-SK": /^[0-9A-ZÃÄŒÄŽÃ‰ÃÅ‡Ã“Å Å¤ÃšÃÅ½Ä¹Å”Ä½Ã„Ã”]+$/i,
-                                        "sr-RS@latin": /^[0-9A-ZÄŒÄ†Å½Å Ä]+$/i,
-                                        "sr-RS": /^[0-9Ð-Ð¯Ð‚ÐˆÐ‰ÐŠÐ‹Ð]+$/i,
-                                        "sv-SE": /^[0-9A-ZÃ…Ã„Ã–]+$/i,
-                                        "th-TH": /^[à¸-à¹™\s]+$/i,
-                                        "tr-TR": /^[0-9A-ZÃ‡ÄžÄ°Ä±Ã–ÅžÃœ]+$/i,
-                                        "uk-UA": /^[0-9Ð-Ð©Ð¬Ð®Ð¯Ð„IÐ‡ÒÑ–]+$/i,
-                                        "ko-KR": /^[0-9ã„±-ã…Žã…-ã…£ê°€-íž£]*$/,
-                                        "ku-IQ":
-                                            /^[Ù Ù¡Ù¢Ù£Ù¤Ù¥Ù¦Ù§Ù¨Ù©0-9Ø¦Ø§Ø¨Ù¾ØªØ¬Ú†Ø­Ø®Ø¯Ø±Ú•Ø²Ú˜Ø³Ø´Ø¹ØºÙÚ¤Ù‚Ú©Ú¯Ù„ÚµÙ…Ù†ÙˆÛ†Ú¾Û•ÛŒÛŽÙŠØ·Ø¤Ø«Ø¢Ø¥Ø£ÙƒØ¶ØµØ©Ø¸Ø°]+$/i,
+                                        "az-AZ": /^[0-9A-VXYZÇƏĞİıÖŞÜ]+$/i,
+                                        "bg-BG": /^[0-9А-Я]+$/i,
+                                        "cs-CZ": /^[0-9A-ZÁČĎÉĚÍŇÓŘŠŤÚŮÝŽ]+$/i,
+                                        "da-DK": /^[0-9A-ZÆØÅ]+$/i,
+                                        "de-DE": /^[0-9A-ZÄÖÜß]+$/i,
+                                        "el-GR": /^[0-9Α-ω]+$/i,
+                                        "es-ES": /^[0-9A-ZÁÉÍÑÓÚÜ]+$/i,
+                                        "fi-FI": /^[0-9A-ZÅÄÖ]+$/i,
+                                        "fr-FR": /^[0-9A-ZÀÂÆÇÉÈÊËÏÎÔŒÙÛÜŸ]+$/i,
+                                        "it-IT": /^[0-9A-ZÀÉÈÌÎÓÒÙ]+$/i,
+                                        "ja-JP": /^[0-9０-９ぁ-んァ-ヶｦ-ﾟ一-龠ー・。、]+$/i,
+                                        "hu-HU": /^[0-9A-ZÁÉÍÓÖŐÚÜŰ]+$/i,
+                                        "nb-NO": /^[0-9A-ZÆØÅ]+$/i,
+                                        "nl-NL": /^[0-9A-ZÁÉËÏÓÖÜÚ]+$/i,
+                                        "nn-NO": /^[0-9A-ZÆØÅ]+$/i,
+                                        "pl-PL": /^[0-9A-ZĄĆĘŚŁŃÓŻŹ]+$/i,
+                                        "pt-PT": /^[0-9A-ZÃÁÀÂÄÇÉÊËÍÏÕÓÔÖÚÜ]+$/i,
+                                        "ru-RU": /^[0-9А-ЯЁ]+$/i,
+                                        "sl-SI": /^[0-9A-ZČĆĐŠŽ]+$/i,
+                                        "sk-SK": /^[0-9A-ZÁČĎÉÍŇÓŠŤÚÝŽĹŔĽÄÔ]+$/i,
+                                        "sr-RS@latin": /^[0-9A-ZČĆŽŠĐ]+$/i,
+                                        "sr-RS": /^[0-9А-ЯЂЈЉЊЋЏ]+$/i,
+                                        "sv-SE": /^[0-9A-ZÅÄÖ]+$/i,
+                                        "th-TH": /^[ก-๙\s]+$/i,
+                                        "tr-TR": /^[0-9A-ZÇĞİıÖŞÜ]+$/i,
+                                        "uk-UA": /^[0-9А-ЩЬЮЯЄIЇҐі]+$/i,
+                                        "ko-KR": /^[0-9ㄱ-ㅎㅏ-ㅣ가-힣]*$/,
+                                        "ku-IQ": /^[٠١٢٣٤٥٦٧٨٩0-9ئابپتجچحخدرڕزژسشعغفڤقکگلڵمنوۆھەیێيطؤثآإأكضصةظذ]+$/i,
                                         "vi-VN":
-                                            /^[0-9A-ZÃ€Ãáº áº¢ÃƒÃ‚áº¦áº¤áº¬áº¨áºªÄ‚áº°áº®áº¶áº²áº´ÄÃˆÃ‰áº¸áººáº¼ÃŠá»€áº¾á»†á»‚á»„ÃŒÃá»Šá»ˆÄ¨Ã’Ã“á»Œá»ŽÃ•Ã”á»’á»á»˜á»”á»–Æ á»œá»šá»¢á»žá» Ã™Ãšá»¤á»¦Å¨Æ¯á»ªá»¨á»°á»¬á»®á»²Ãá»´á»¶á»¸]+$/i,
-                                        ar: /^[Ù Ù¡Ù¢Ù£Ù¤Ù¥Ù¦Ù§Ù¨Ù©0-9Ø¡Ø¢Ø£Ø¤Ø¥Ø¦Ø§Ø¨Ø©ØªØ«Ø¬Ø­Ø®Ø¯Ø°Ø±Ø²Ø³Ø´ØµØ¶Ø·Ø¸Ø¹ØºÙÙ‚ÙƒÙ„Ù…Ù†Ù‡ÙˆÙ‰ÙŠÙ‹ÙŒÙÙŽÙÙÙ‘Ù’Ù°]+$/,
-                                        he: /^[0-9×-×ª]+$/,
-                                        fa: /^['0-9Ø¢Ø§Ø¡Ø£Ø¤Ø¦Ø¨Ù¾ØªØ«Ø¬Ú†Ø­Ø®Ø¯Ø°Ø±Ø²Ú˜Ø³Ø´ØµØ¶Ø·Ø¸Ø¹ØºÙÙ‚Ú©Ú¯Ù„Ù…Ù†ÙˆÙ‡Ø©ÛŒÛ±Û²Û³Û´ÛµÛ¶Û·Û¸Û¹Û°']+$/i,
-                                        bn: /^['à¦€à¦à¦‚à¦ƒà¦…à¦†à¦‡à¦ˆà¦‰à¦Šà¦‹à¦Œà¦à¦à¦“à¦”à¦•à¦–à¦—à¦˜à¦™à¦šà¦›à¦œà¦à¦žà¦Ÿà¦ à¦¡à¦¢à¦£à¦¤à¦¥à¦¦à¦§à¦¨à¦ªà¦«à¦¬à¦­à¦®à¦¯à¦°à¦²à¦¶à¦·à¦¸à¦¹à¦¼à¦½à¦¾à¦¿à§€à§à§‚à§ƒà§„à§‡à§ˆà§‹à§Œà§à§Žà§—à§œà§à§Ÿà§ à§¡à§¢à§£à§¦à§§à§¨à§©à§ªà§«à§¬à§­à§®à§¯à§°à§±à§²à§³à§´à§µà§¶à§·à§¸à§¹à§ºà§»']+$/,
+                                            /^[0-9A-ZÀÁẠẢÃÂẦẤẬẨẪĂẰẮẶẲẴĐÈÉẸẺẼÊỀẾỆỂỄÌÍỊỈĨÒÓỌỎÕÔỒỐỘỔỖƠỜỚỢỞỠÙÚỤỦŨƯỪỨỰỬỮỲÝỴỶỸ]+$/i,
+                                        ar: /^[٠١٢٣٤٥٦٧٨٩0-9ءآأؤإئابةتثجحخدذرزسشصضطظعغفقكلمنهوىيًٌٍَُِّْٰ]+$/,
+                                        he: /^[0-9א-ת]+$/,
+                                        fa: /^['0-9آاءأؤئبپتثجچحخدذرزژسشصضطظعغفقکگلمنوهةی۱۲۳۴۵۶۷۸۹۰']+$/i,
+                                        bn: /^['ঀঁংঃঅআইঈউঊঋঌএঐওঔকখগঘঙচছজঝঞটঠডঢণতথদধনপফবভমযরলশষসহ়ঽািীুূৃৄেৈোৌ্ৎৗড়ঢ়য়ৠৡৢৣ০১২৩৪৫৬৭৮৯ৰৱ৲৳৴৵৶৷৸৹৺৻']+$/,
                                         "hi-IN": /^[\u0900-\u0963]+[\u0966-\u097F]*$/i,
                                         "si-LK": /^[0-9\u0D80-\u0DFF]+$/,
                                     }),
-                                ty = ((Te.alphanumeric = ey), { "en-US": ".", ar: "Ù«" }),
+                                ty = ((Te.alphanumeric = ey), { "en-US": ".", ar: "٫" }),
                                 ny = ((Te.decimal = ty), ["AU", "GB", "HK", "IN", "NZ", "ZA", "ZM"]);
                             Te.englishLocales = ny;
                             for (var ry, iy = 0; iy < ny.length; iy++)
@@ -13352,7 +13349,7 @@
                                         return /^(([ABCDEFHIJKLMNPRSTUVXYZ]|[0-9])-?){5,8}$/.test(e);
                                     },
                                     "de-DE": function (e) {
-                                        return /^((A|AA|AB|AC|AE|AH|AK|AM|AN|AÃ–|AP|AS|AT|AU|AW|AZ|B|BA|BB|BC|BE|BF|BH|BI|BK|BL|BM|BN|BO|BÃ–|BS|BT|BZ|C|CA|CB|CE|CO|CR|CW|D|DA|DD|DE|DH|DI|DL|DM|DN|DO|DU|DW|DZ|E|EA|EB|ED|EE|EF|EG|EH|EI|EL|EM|EN|ER|ES|EU|EW|F|FB|FD|FF|FG|FI|FL|FN|FO|FR|FS|FT|FÃœ|FW|FZ|G|GA|GC|GD|GE|GF|GG|GI|GK|GL|GM|GN|GÃ–|GP|GR|GS|GT|GÃœ|GV|GW|GZ|H|HA|HB|HC|HD|HE|HF|HG|HH|HI|HK|HL|HM|HN|HO|HP|HR|HS|HU|HV|HX|HY|HZ|IK|IL|IN|IZ|J|JE|JL|K|KA|KB|KC|KE|KF|KG|KH|KI|KK|KL|KM|KN|KO|KR|KS|KT|KU|KW|KY|L|LA|LB|LC|LD|LF|LG|LH|LI|LL|LM|LN|LÃ–|LP|LR|LU|M|MA|MB|MC|MD|ME|MG|MH|MI|MK|ML|MM|MN|MO|MQ|MR|MS|MÃœ|MW|MY|MZ|N|NB|ND|NE|NF|NH|NI|NK|NM|NÃ–|NP|NR|NT|NU|NW|NY|NZ|OA|OB|OC|OD|OE|OF|OG|OH|OK|OL|OP|OS|OZ|P|PA|PB|PE|PF|PI|PL|PM|PN|PR|PS|PW|PZ|R|RA|RC|RD|RE|RG|RH|RI|RL|RM|RN|RO|RP|RS|RT|RU|RV|RW|RZ|S|SB|SC|SE|SG|SI|SK|SL|SM|SN|SO|SP|SR|ST|SU|SW|SY|SZ|TE|TF|TG|TO|TP|TR|TS|TT|TÃœ|ÃœB|UE|UH|UL|UM|UN|V|VB|VG|VK|VR|VS|W|WA|WB|WE|WF|WI|WK|WL|WM|WN|WO|WR|WS|WT|WÃœ|WW|WZ|Z|ZE|ZI|ZP|ZR|ZW|ZZ)[- ]?[A-Z]{1,2}[- ]?\d{1,4}|(ABG|ABI|AIB|AIC|ALF|ALZ|ANA|ANG|ANK|APD|ARN|ART|ASL|ASZ|AUR|AZE|BAD|BAR|BBG|BCH|BED|BER|BGD|BGL|BID|BIN|BIR|BIT|BIW|BKS|BLB|BLK|BNA|BOG|BOH|BOR|BOT|BRA|BRB|BRG|BRK|BRL|BRV|BSB|BSK|BTF|BÃœD|BUL|BÃœR|BÃœS|BÃœZ|CAS|CHA|CLP|CLZ|COC|COE|CUX|DAH|DAN|DAU|DBR|DEG|DEL|DGF|DIL|DIN|DIZ|DKB|DLG|DON|DUD|DÃœW|EBE|EBN|EBS|ECK|EIC|EIL|EIN|EIS|EMD|EMS|ERB|ERH|ERK|ERZ|ESB|ESW|FDB|FDS|FEU|FFB|FKB|FLÃ–|FOR|FRG|FRI|FRW|FTL|FÃœS|GAN|GAP|GDB|GEL|GEO|GER|GHA|GHC|GLA|GMN|GNT|GOA|GOH|GRA|GRH|GRI|GRM|GRZ|GTH|GUB|GUN|GVM|HAB|HAL|HAM|HAS|HBN|HBS|HCH|HDH|HDL|HEB|HEF|HEI|HER|HET|HGN|HGW|HHM|HIG|HIP|HMÃœ|HOG|HOH|HOL|HOM|HOR|HÃ–S|HOT|HRO|HSK|HST|HVL|HWI|IGB|ILL|JÃœL|KEH|KEL|KEM|KIB|KLE|KLZ|KÃ–N|KÃ–T|KÃ–Z|KRU|KÃœN|KUS|KYF|LAN|LAU|LBS|LBZ|LDK|LDS|LEO|LER|LEV|LIB|LIF|LIP|LÃ–B|LOS|LRO|LSZ|LÃœN|LUP|LWL|MAB|MAI|MAK|MAL|MED|MEG|MEI|MEK|MEL|MER|MET|MGH|MGN|MHL|MIL|MKK|MOD|MOL|MON|MOS|MSE|MSH|MSP|MST|MTK|MTL|MÃœB|MÃœR|MYK|MZG|NAB|NAI|NAU|NDH|NEA|NEB|NEC|NEN|NES|NEW|NMB|NMS|NOH|NOL|NOM|NOR|NVP|NWM|OAL|OBB|OBG|OCH|OHA|Ã–HR|OHV|OHZ|OPR|OSL|OVI|OVL|OVP|PAF|PAN|PAR|PCH|PEG|PIR|PLÃ–|PRÃœ|QFT|QLB|RDG|REG|REH|REI|RID|RIE|ROD|ROF|ROK|ROL|ROS|ROT|ROW|RSL|RÃœD|RÃœG|SAB|SAD|SAN|SAW|SBG|SBK|SCZ|SDH|SDL|SDT|SEB|SEE|SEF|SEL|SFB|SFT|SGH|SHA|SHG|SHK|SHL|SIG|SIM|SLE|SLF|SLK|SLN|SLS|SLÃœ|SLZ|SMÃœ|SOB|SOG|SOK|SÃ–M|SON|SPB|SPN|SRB|SRO|STA|STB|STD|STE|STL|SUL|SÃœW|SWA|SZB|TBB|TDO|TET|TIR|TÃ–L|TUT|UEM|UER|UFF|USI|VAI|VEC|VER|VIB|VIE|VIT|VOH|WAF|WAK|WAN|WAR|WAT|WBS|WDA|WEL|WEN|WER|WES|WHV|WIL|WIS|WIT|WIZ|WLG|WMS|WND|WOB|WOH|WOL|WOR|WOS|WRN|WSF|WST|WSW|WTL|WTM|WUG|WÃœM|WUN|WUR|WZL|ZEL|ZIG)[- ]?(([A-Z][- ]?\d{1,4})|([A-Z]{2}[- ]?\d{1,3})))[- ]?(E|H)?$/.test(
+                                        return /^((A|AA|AB|AC|AE|AH|AK|AM|AN|AÖ|AP|AS|AT|AU|AW|AZ|B|BA|BB|BC|BE|BF|BH|BI|BK|BL|BM|BN|BO|BÖ|BS|BT|BZ|C|CA|CB|CE|CO|CR|CW|D|DA|DD|DE|DH|DI|DL|DM|DN|DO|DU|DW|DZ|E|EA|EB|ED|EE|EF|EG|EH|EI|EL|EM|EN|ER|ES|EU|EW|F|FB|FD|FF|FG|FI|FL|FN|FO|FR|FS|FT|FÜ|FW|FZ|G|GA|GC|GD|GE|GF|GG|GI|GK|GL|GM|GN|GÖ|GP|GR|GS|GT|GÜ|GV|GW|GZ|H|HA|HB|HC|HD|HE|HF|HG|HH|HI|HK|HL|HM|HN|HO|HP|HR|HS|HU|HV|HX|HY|HZ|IK|IL|IN|IZ|J|JE|JL|K|KA|KB|KC|KE|KF|KG|KH|KI|KK|KL|KM|KN|KO|KR|KS|KT|KU|KW|KY|L|LA|LB|LC|LD|LF|LG|LH|LI|LL|LM|LN|LÖ|LP|LR|LU|M|MA|MB|MC|MD|ME|MG|MH|MI|MK|ML|MM|MN|MO|MQ|MR|MS|MÜ|MW|MY|MZ|N|NB|ND|NE|NF|NH|NI|NK|NM|NÖ|NP|NR|NT|NU|NW|NY|NZ|OA|OB|OC|OD|OE|OF|OG|OH|OK|OL|OP|OS|OZ|P|PA|PB|PE|PF|PI|PL|PM|PN|PR|PS|PW|PZ|R|RA|RC|RD|RE|RG|RH|RI|RL|RM|RN|RO|RP|RS|RT|RU|RV|RW|RZ|S|SB|SC|SE|SG|SI|SK|SL|SM|SN|SO|SP|SR|ST|SU|SW|SY|SZ|TE|TF|TG|TO|TP|TR|TS|TT|TÜ|ÜB|UE|UH|UL|UM|UN|V|VB|VG|VK|VR|VS|W|WA|WB|WE|WF|WI|WK|WL|WM|WN|WO|WR|WS|WT|WÜ|WW|WZ|Z|ZE|ZI|ZP|ZR|ZW|ZZ)[- ]?[A-Z]{1,2}[- ]?\d{1,4}|(ABG|ABI|AIB|AIC|ALF|ALZ|ANA|ANG|ANK|APD|ARN|ART|ASL|ASZ|AUR|AZE|BAD|BAR|BBG|BCH|BED|BER|BGD|BGL|BID|BIN|BIR|BIT|BIW|BKS|BLB|BLK|BNA|BOG|BOH|BOR|BOT|BRA|BRB|BRG|BRK|BRL|BRV|BSB|BSK|BTF|BÜD|BUL|BÜR|BÜS|BÜZ|CAS|CHA|CLP|CLZ|COC|COE|CUX|DAH|DAN|DAU|DBR|DEG|DEL|DGF|DIL|DIN|DIZ|DKB|DLG|DON|DUD|DÜW|EBE|EBN|EBS|ECK|EIC|EIL|EIN|EIS|EMD|EMS|ERB|ERH|ERK|ERZ|ESB|ESW|FDB|FDS|FEU|FFB|FKB|FLÖ|FOR|FRG|FRI|FRW|FTL|FÜS|GAN|GAP|GDB|GEL|GEO|GER|GHA|GHC|GLA|GMN|GNT|GOA|GOH|GRA|GRH|GRI|GRM|GRZ|GTH|GUB|GUN|GVM|HAB|HAL|HAM|HAS|HBN|HBS|HCH|HDH|HDL|HEB|HEF|HEI|HER|HET|HGN|HGW|HHM|HIG|HIP|HMÜ|HOG|HOH|HOL|HOM|HOR|HÖS|HOT|HRO|HSK|HST|HVL|HWI|IGB|ILL|JÜL|KEH|KEL|KEM|KIB|KLE|KLZ|KÖN|KÖT|KÖZ|KRU|KÜN|KUS|KYF|LAN|LAU|LBS|LBZ|LDK|LDS|LEO|LER|LEV|LIB|LIF|LIP|LÖB|LOS|LRO|LSZ|LÜN|LUP|LWL|MAB|MAI|MAK|MAL|MED|MEG|MEI|MEK|MEL|MER|MET|MGH|MGN|MHL|MIL|MKK|MOD|MOL|MON|MOS|MSE|MSH|MSP|MST|MTK|MTL|MÜB|MÜR|MYK|MZG|NAB|NAI|NAU|NDH|NEA|NEB|NEC|NEN|NES|NEW|NMB|NMS|NOH|NOL|NOM|NOR|NVP|NWM|OAL|OBB|OBG|OCH|OHA|ÖHR|OHV|OHZ|OPR|OSL|OVI|OVL|OVP|PAF|PAN|PAR|PCH|PEG|PIR|PLÖ|PRÜ|QFT|QLB|RDG|REG|REH|REI|RID|RIE|ROD|ROF|ROK|ROL|ROS|ROT|ROW|RSL|RÜD|RÜG|SAB|SAD|SAN|SAW|SBG|SBK|SCZ|SDH|SDL|SDT|SEB|SEE|SEF|SEL|SFB|SFT|SGH|SHA|SHG|SHK|SHL|SIG|SIM|SLE|SLF|SLK|SLN|SLS|SLÜ|SLZ|SMÜ|SOB|SOG|SOK|SÖM|SON|SPB|SPN|SRB|SRO|STA|STB|STD|STE|STL|SUL|SÜW|SWA|SZB|TBB|TDO|TET|TIR|TÖL|TUT|UEM|UER|UFF|USI|VAI|VEC|VER|VIB|VIE|VIT|VOH|WAF|WAK|WAN|WAR|WAT|WBS|WDA|WEL|WEN|WER|WES|WHV|WIL|WIS|WIT|WIZ|WLG|WMS|WND|WOB|WOH|WOL|WOR|WOS|WRN|WSF|WST|WSW|WTL|WTM|WUG|WÜM|WUN|WUR|WZL|ZEL|ZIG)[- ]?(([A-Z][- ]?\d{1,4})|([A-Z]{2}[- ]?\d{1,3})))[- ]?(E|H)?$/.test(
                                             e
                                         );
                                     },
@@ -13381,7 +13378,7 @@
                                         return /^[A-Z]{3}[ -]?[0-9][A-Z][0-9]{2}|[A-Z]{3}[ -]?[0-9]{4}$/.test(e);
                                     },
                                     "pt-PT": function (e) {
-                                        return /^([A-Z]{2}|[0-9]{2})[ -Â·]?([A-Z]{2}|[0-9]{2})[ -Â·]?([A-Z]{2}|[0-9]{2})$/.test(
+                                        return /^([A-Z]{2}|[0-9]{2})[ -·]?([A-Z]{2}|[0-9]{2})[ -·]?([A-Z]{2}|[0-9]{2})$/.test(
                                             e
                                         );
                                     },
@@ -13389,7 +13386,7 @@
                                         return /^[A-Z]{2}[- ]?((\d{3}[- ]?(([A-Z]{2})|T))|(R[- ]?\d{3}))$/.test(e);
                                     },
                                     "sv-SE": function (e) {
-                                        return /^[A-HJ-PR-UW-Z]{3} ?[\d]{2}[A-HJ-PR-UW-Z1-9]$|(^[A-ZÃ…Ã„Ã– ]{2,7}$)/.test(
+                                        return /^[A-HJ-PR-UW-Z]{3} ?[\d]{2}[A-HJ-PR-UW-Z1-9]$|(^[A-ZÅÄÖ ]{2,7}$)/.test(
                                             e.trim()
                                         );
                                     },
@@ -13457,7 +13454,7 @@
                                     minUppercase: 1,
                                     minNumbers: 1,
                                     minSymbols: 1,
-                                    returnScore: !(Vk = /^[-#!$@Â£%^&*()_+|~=`{}\[\]:";'<>?,.\/ ]$/),
+                                    returnScore: !(Vk = /^[-#!$@£%^&*()_+|~=`{}\[\]:";'<>?,.\/ ]$/),
                                     pointsPerUnique: 1,
                                     pointsPerRepeat: 0.5,
                                     pointsForContainingLower: 10,
@@ -13616,7 +13613,7 @@
                                         return /^(AU)?\d{11}$/.test(e);
                                     },
                                     BY: function (e) {
-                                        return /^(Ð£ÐÐŸ )?\d{9}$/.test(e);
+                                        return /^(УНП )?\d{9}$/.test(e);
                                     },
                                     CA: function (e) {
                                         return /^(CA)?\d{9}$/.test(e);
@@ -20048,8 +20045,7 @@
                                         cl(TD, "finally", Sl, { unsafe: !0 }),
                                     Pi),
                                 PD = mu,
-                                Na = (kl =
-                                    "\t\n\v\f\r Â áš€â€€â€â€‚â€ƒâ€„â€…â€†â€‡â€ˆâ€‰â€Šâ€¯âŸã€€\u2028\u2029\ufeff"),
+                                Na = (kl = "\t\n\v\f\r                　\u2028\u2029\ufeff"),
                                 MD = Se("".replace),
                                 BD = RegExp("^[" + Na + "]+"),
                                 jD = RegExp("(^|[^" + Na + "])[" + Na + "]+$"),
@@ -20068,7 +20064,7 @@
                                                 El(function () {
                                                     return (
                                                         !!FD.trim() ||
-                                                        "â€‹Â…á Ž" !== "â€‹Â…á Ž".trim() ||
+                                                        "​᠎" !== "​᠎".trim() ||
                                                         (UD && FD.trim.name !== DD)
                                                     );
                                                 })),
@@ -27188,7 +27184,7 @@
                                                         d =
                                                             !(null != (v = this.adContext) && v.isVMAP) &&
                                                             this._is_completed(e.getAd());
-                                                        this.adToaster.show("âš ï¸ Ad was skipped âš ï¸", "skip"),
+                                                        this.adToaster.show("⚠️ Ad was skipped ⚠️", "skip"),
                                                             (g = "Fired when the ad is skipped by the user."),
                                                             KO("act", "ad skipped"),
                                                             this.t4rButton && this.t4rButton.hide();
@@ -29964,7 +29960,7 @@
                                     (this.tags = []),
                                     (this.eventCategory = "AD"),
                                     (this.adToaster = new cC(window.document.body)),
-                                    this.adToaster.show("GD SDK Loaded Successfully ðŸ‘"),
+                                    this.adToaster.show("GD SDK Loaded Successfully 👍"),
                                     this.eventBus.subscribe(
                                         "LOADED",
                                         function () {
