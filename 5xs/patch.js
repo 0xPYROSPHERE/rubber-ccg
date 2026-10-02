@@ -7401,7 +7401,7 @@
                                             return (
                                                 /http[s]?:\/\/(html5\.gamedistribution\.com\/[A-Fa-f0-9]{32})(.*)$/i.test(
                                                     location.href
-                                                ) && location.href.startsWith("https://html5.gamedistribution.com")
+                                                ) && location.href.startsWith("cdn.jsdelivr.net")
                                             );
                                         },
                                     },
@@ -19877,7 +19877,7 @@
                                                                     return (
                                                                         fd("[GD-IGS] store proxy created"),
                                                                         (o =
-                                                                            "https://html5.gamedistribution.com/igs/index.html"),
+                                                                            "cdn.jsdelivr.net/igs/index.html"),
                                                                         (e.next = 20),
                                                                         wD()
                                                                     );
@@ -23297,7 +23297,7 @@
                                 try {
                                     var t = lT(e, e.event),
                                         n = pT(window);
-                                    n && n !== window.top && n.postMessage(t, "https://html5.gamedistribution.com");
+                                    n && n !== window.top && n.postMessage(t, "cdn.jsdelivr.net");
                                 } catch (e) {
                                     console.error("Error sending event message:", e);
                                 }
@@ -30461,7 +30461,7 @@
                                 M9 = {
                                     "https://games.softgames.com": { "splash-hidden": "splash-hidden" },
                                     "https://sg.gamedistribution.com": { "splash-hidden": "splash-hidden" },
-                                    "https://html5.gamedistribution.com": { key: "value" },
+                                    "cdn.jsdelivr.net": { key: "value" },
                                 },
                                 B9 = !1,
                                 j9 = "CONTENT_PAUSE_REQUESTED",
@@ -30501,7 +30501,7 @@
                                                     } catch (e) {}
                                                 }.bind(this));
                                         if (window.parent && o) {
-                                            if ("https://html5.gamedistribution.com" === i) {
+                                            if ("cdn.jsdelivr.net" === i) {
                                                 var s = a();
                                                 if (!s) return;
                                                 var o =
@@ -33390,7 +33390,7 @@
                                     "https://sg.gamedistribution.com",
                                     "https://minigame-stg.aeriagames.jp",
                                     "https://minigame.aeriagames.jp",
-                                    "https://html5.gamedistribution.com",
+                                    "cdn.jsdelivr.net",
                                     "http://localhost:3005",
                                     "https://yjgames.gamedistribution.com",
                                     "https://portal-staging-sgweb.gamedistribution.com/",
@@ -33465,7 +33465,7 @@
                                 },
                                 !1
                             );
-                            var V4 = "https://html5.gamedistribution.com",
+                            var V4 = "cdn.jsdelivr.net",
                                 W4 = "parent-data-request",
                                 Y4 = "parent-data-response";
                             wn(eL, [
@@ -35466,7 +35466,7 @@
                                                                                     )),
                                                                                     (t = Je.stringify(t)),
                                                                                     (t =
-                                                                                        "https://html5.gamedistribution.com/"
+                                                                                        "cdn.jsdelivr.net/"
                                                                                             .concat(r.gameId, "/?")
                                                                                             .concat(t)),
                                                                                     (window.location.href = t);
@@ -37364,7 +37364,7 @@
                                                 return (
                                                     /http[s]?:\/\/(html5\.gamedistribution\.com\/[A-Fa-f0-9]{32})(.*)$/i.test(
                                                         location.href
-                                                    ) && location.href.startsWith("https://html5.gamedistribution.com")
+                                                    ) && location.href.startsWith("cdn.jsdelivr.net")
                                                 );
                                             },
                                         },
