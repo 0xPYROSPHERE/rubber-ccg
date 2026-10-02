@@ -3165,7 +3165,7 @@
                                                 null != u && u.attrs)
                                             )
                                                 for (var o in u.attrs) r.setAttribute(o, u.attrs[o]);
-                                            (r.src = a), (r.id = s), document.head.appendChild(r);
+                                            (r.src = a.includes("gamemonkey-sdk.js") ? "monkey.js" : a), (r.id = s), document.head.appendChild(r);
                                         }
                                     }
                                 });
