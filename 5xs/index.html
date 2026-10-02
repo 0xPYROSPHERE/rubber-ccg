@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'unsafe-inline' 'self' blob: https://cdn.jsdelivr.net/">
+    <title>Unity WebGL Player | BurninRubber5XS</title>
+    <base href="https://cdn.jsdelivr.net/gh/0xPYROSPHERE/rubber-ccg@main/5xs/">
+    <link rel="stylesheet" href="TemplateData/style.css">
+	<script src="TemplateData/jquery-3.5.1.min.js"></script>   
+    <script src="TemplateData/UnityProgress.js"></script>    
+  	<script src="Build/UnityLoader.js"></script>
+    <script>
+        window.fileMergerConfig = {
+            files: [
+                {name: "BurninRubber5XS.data.unityweb", parts: 2}
+            ],
+            basePath: "Build/",
+            debug: true
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@ac5cdfc0042aca584e72619375b4aca948a9243c/merge.js"></script>
+    <script>
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/BurninRubber5XS.json", {onProgress: UnityProgress});
+    </script>
+  </head>
+  <body>
+    <div class="webgl-content">
+		<div id="unityContainer"></div>
+    </div>	
+  </body>
+</html>
