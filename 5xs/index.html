@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta http-equiv="Content-Security-Policy" content="script-src 'unsafe-inline' 'unsafe-eval' 'self' blob: https://cdn.jsdelivr.net/ https://cdnjs.cloudflare.com/">
     <title>Unity WebGL Player | BurninRubber5XS</title>
     <base href="https://cdn.jsdelivr.net/gh/0xPYROSPHERE/rubber-ccg@927a009d84b02c4de3da7968adf42c3684bb28a6/5xs/">
     <link rel="stylesheet" href="TemplateData/style.css">
@@ -13,9 +12,23 @@
     <script>
         window.fileMergerConfig = {
             files: [
-                {name: "BurninRubber5XS.data.unityweb", parts: 2}
+                {name: "Build/BurninRubber5XS.data.unityweb", parts: 2},
+                {name: "null.html", parts: 1},
+                {name: "Build/AssetBundles/track0", parts: 1},
+                {name: "Build/AssetBundles/track1", parts: 1},
+                {name: "Build/AssetBundles/track2", parts: 1},
+                {name: "Build/AssetBundles/track3", parts: 1},
+                {name: "Build/AssetBundles/track4", parts: 1},
+                {name: "Build/AssetBundles/track5", parts: 1},
+                {name: "Build/AssetBundles/track6", parts: 1},
+                {name: "Build/AssetBundles/track7", parts: 1},
+                {name: "Build/AssetBundles/track8", parts: 1},
+                {name: "Build/AssetBundles/track9", parts: 1},
+                {name: "Build/AssetBundles/track10", parts: 1},
+                {name: "Build/AssetBundles/track11", parts: 1},
+                {name: "Build/AssetBundles/track12", parts: 1},
             ],
-            basePath: "Build/",
+            basePath: "",
             debug: true
         };
     </script>
@@ -29,7 +42,7 @@
                 debug: true
             };
 
-            const config = Object.assign({}, defaultConfig, window.fileMergerConfig || {});
+            var config = Object.assign({}, defaultConfig, window.fileMergerConfig || {});
             window.mergedFiles = window.mergedFiles || {};
             const mergeStatus = {};
 
@@ -58,10 +71,14 @@
             async function mergeSplitFiles(filePath, numParts) {
                 try {
                 const parts = [];
-                for (let i = 1; i <= numParts; i++) {
-                    parts.push(`${filePath}.part${i}`);
+                if (numParts == 1) {
+                    parts.push(filePath);
+                } else {
+                    for (let i = 1; i <= numParts; i++) {
+                        parts.push(`${filePath}.part${i}`);
+                    }
                 }
-
+                
                 log(`Merging ${filePath} from ${numParts} parts...`);
 
                 // Fetch parts using the original fetch to bypass interception
@@ -108,11 +125,17 @@
                     return fileName;
                 }
                 }
-                if (urlStr.includes("/track0")) {
-                    return "Build/track0";
+                if (urlStr.includes("/track")) {
+                    for (let i=0; i<13; i++) {
+                        if (urlStr.includes("/track" + i)) {
+                            let interceptUrl = "Build/AssetBundles/track" + i;
+                            config.files.push({name: interceptUrl, parts: 1});
+                            return interceptUrl;
+                        }
+                    }
                 }
                 if (urlStr.includes("tracker") || urlStr.includes("tag.atom.gamedistribution")) {
-                    return "/gh/0xPYROSPHERE/rubber-ccg@main/5xs/null.html";
+                    return "null.html";
                 }
                 return null;
             }
@@ -120,9 +143,8 @@
             function getMergedFile(filename) {
                 if (window.mergedFiles[filename]) return window.mergedFiles[filename];
                 for (const [key, value] of Object.entries(window.mergedFiles)) {
-                if (urlsMatch(key, filename)) return value;
+                    if (urlsMatch(key, filename)) return value;
                 }
-                return null;
             }
 
             // --- FETCH INTERCEPTOR ---
